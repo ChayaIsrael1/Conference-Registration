@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Conference Registration</h1>
+        <form action="sumbit" method="get">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input id="name" type="text" minlength="2" required>
+                <label for="email">Email:</label>
+                <input id="email" type="email" required>
+                <label for="tel">Tel:</label>
+                <input id="tel" type="tel" pattern="0[0-9]{8,9}" minlength="9" maxlength="10">
+            </fieldset>
+            <fieldset>
+                <legend>Ticket & Workshops</legend>
+                <label for="TicketType">Ticket Type</label>
+                <select name="Ticket Type" id="TicketType" required>
+                    <option value="Standard">Standard</option>
+                    <option value="VIP">VIP</option>
+                    <option value="Student">Student</option>
+                </select>
+                <br>
+                <label for="Web Performance">Web Performance</label>
+                <input type="checkbox" id="Web Performance" name="Workshops">
+                <label for="Accessibility">Accessibility</label>
+                <input type="checkbox" id="Accessibility" name="Workshops">
+                <label for="Testing">Testing</label>
+                <input type="checkbox" id="Testing" name="Workshops">
+                <br>
+                <label for="None">None</label>
+                <input type="radio" id="None" name="Diet">
+                <label for="Vegan">Vegan</label>
+                <input type="radio" id="Vegan" name="Diet">
+                <label for="Kosher">Kosher</label>
+                <input type="radio" id="Kosher" name="Diet">
+                <label for="Halal">Halal</label>
+                <input type="radio" id="Halal" name="Diet">
+                <label for="Other">Other</label>
+                <input type="radio" id="Other" name="Diet">
+            </fieldset>
+            <fieldset>
+                <legend>Payment Details</legend>
+                <label for="Card number">Card number</label>
+                <input type="text" id="Card number" pattern="[0-9 ]" minlength="13" maxlength="19">
+                <br>
+                <label for="Expiry date">Expiry date</label>
+                <input type="month" id="Expiry date" min="2026-10">
+                <br>
+                <label for="CVV">CVV</label>
+                <input type="password" id="CVV" pattern="[0-9]{3,4}" minlength="3" maxlength="4">
+            </fieldset>
+            <br>
+            <button type="submit">Sumbit</button>
+        </form>
+    </main>
+</body>
+
+</html>
